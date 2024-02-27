@@ -1,22 +1,16 @@
 function isPalindrome(word) {
-      // Write your algorithm here
-
-    let rev = word.split("").reverse().join("");
-
-    if (rev == word) {
-        return true
+  for (let startIndex = 0; startIndex < word.length / 2; startIndex++) {
+    const endIndex = word.length - 1 - startIndex;
+    if (word[startIndex] !== word[endIndex]) {
+      return false;
     }
-    return false
+  }
 
+  return true;
 }
 
-let word1 = "racecar";
-let word2 = "nitin";
-let word3 = "Rama";
-
-console.log(isPalindrome(word1));
-console.log(isPalindrome(word2));
-console.log(isPalindrome(word3));
+console.log(isPalindrome('madam'));
+console.log(isPalindrome('cat'));
 
 /* 
   Add your pseudocode here
