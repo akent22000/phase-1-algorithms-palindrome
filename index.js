@@ -1,13 +1,39 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+      // Write your algorithm here
+
+    let rev = word.split("").reverse().join("");
+
+    if (rev == word) {
+        return true
+    }
+    return false
+
 }
+
+let word1 = "racecar";
+let word2 = "nitin";
+let word3 = "Rama";
+
+console.log(isPalindrome(word1));
+console.log(isPalindrome(word2));
+console.log(isPalindrome(word3));
 
 /* 
   Add your pseudocode here
+  initialize empty array called result
+
+iterate over each item in the input array:
+  if element is a number:
+    push item onto result
+
+return result
 */
 
 /*
   Add written explanation of your solution here
+  Write a function isPalindrome that will receive one argument, a string. 
+  Your function should return true if the string is a palindrome (that is, if it reads the same forwards and backwards, like "mom" or "racecar"), and 
+  return false if it is not a palindrome.
 */
 
 // You can run `node index.js` to view these console logs
